@@ -1,20 +1,21 @@
 import React from 'react';
-import { Logo } from 'assets';
-import cnBind, { Argument } from 'classnames/bind';
+import cnBind from 'classnames/bind';
 
-import { Counter } from 'components/Counter';
+import { KeyboardLayout } from 'components/KeyboardLayout';
 
 import styles from './App.module.scss';
 
-const cx = cnBind.bind(styles) as (...args: Argument[]) => string;
+const cx = cnBind.bind(styles);
 
 export const App: React.FC = () => {
     return (
         <div className={cx('App')}>
-            <header className={cx('App-header')}>
-                <Logo className={cx('App-logo')} />
-                <Counter title="KeymappingsLayout" />
+            <header>
             </header>
+            <body className={cx('App__Body')}>
+                <KeyboardLayout title="NeoVim" />
+                <KeyboardLayout title="WezTerm" />
+            </body>
         </div>
     );
 };

@@ -1,4 +1,4 @@
-{
+module.exports = {
   "env": {
       "browser": true,
       "es2020": true
@@ -20,7 +20,7 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
       "project": "tsconfig.json",
-      "tsconfigRootDir": "."
+      "tsconfigRootDir": __dirname,
   },
   "rules": {
       "eslint-comments/no-unused-disable": "error",
