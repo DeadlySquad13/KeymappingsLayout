@@ -8,6 +8,7 @@ input {
 }
 
 .KeyboardLayout {
+    margin-top: 16px;
     width: 80%;
 
     &__Title {
@@ -15,34 +16,45 @@ input {
     }
 
     &__Input {
-        margin: 16px;
+        margin-top: 16px;
     }
 
 
     :global .simple-keyboard {
+        margin-top: 16px;
         ax-width: 80%;
+        padding: 0;
 
-        &.hg-theme-default.myTheme {
+        & .hg-theme-default.myTheme {
             margin: 10px;
-            width: calc(100% - 20px);
+            width: 100%;
         }
 
-        &.hg-layout-default .hg-button {
+        & .hg-row:first-child {
+            margin-bottom: 20px;
+        }
+
+        & .hg-button {
             color: gray;
             height: 64px;
         }
 
-        &.hg-layout-default .hg-button.hg-red {
+        & .hg-button.hg-red {
             background: rgb(255, 0, 0, 0.7);
             color: white;
         }
 
-        &.hg-layout-default .hg-button.hg-highlight {
+        & .hg-button.hg-highlight {
             box-shadow: 0px 0px 40px 5px rgba(255, 255, 0, 0.5);
             z-index: 1;
         }
 
-        .hg-button.hg-functionBtn {
+        & .hg-button-container {
+            margin: 0 20px;
+            min-width: calc(4*4em);
+        }
+
+        & .hg-button.hg-functionBtn {
             &.hg-button-shiftleft {
                 flex-shrink: 5;
             }

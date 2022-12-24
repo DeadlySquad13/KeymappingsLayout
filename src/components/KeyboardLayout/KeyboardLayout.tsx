@@ -24,6 +24,7 @@ const getLayout = (layoutType: LayoutType = LayoutType.Big) => {
         case LayoutType.Big: {
             return {
                 default: [
+                    "esc [F1 F2 F3 F4] [F5 F6 F7 F8] F9 F10 F11 F12",
                     "` 1 2 3 4 5 6 7 8 9 0 - = {bksp}",
                     "{tab} q w e r t y u i o p [ ] {enter}",
                     "{lock} a s d f g h j k l ; ' \\ {enter}",
