@@ -31,12 +31,19 @@ input {
         }
 
         & .hg-row:first-child {
-            margin-bottom: 20px;
+            margin-bottom: 20px; // Detach F row.
         }
 
         & .hg-button {
             color: gray;
             height: 64px;
+        }
+
+        // Special highlights.
+        // TODO: bound / not bound (grayed out).
+        & .hg-button.hg-chord {
+            background: rgb(255, 255, 0, 0.7);
+            color: white;
         }
 
         & .hg-button.hg-red {
@@ -49,11 +56,15 @@ input {
             z-index: 1;
         }
 
+        // F groups.
         & .hg-button-container {
             margin: 0 20px;
             min-width: calc(4*4em);
         }
 
+        // Sizes of special keys.
+        //   TODO: Change default key size to a constant, use this constant with
+        // coefficients here.
         & .hg-button.hg-functionBtn {
             &.hg-button-shiftleft {
                 flex-shrink: 5;
